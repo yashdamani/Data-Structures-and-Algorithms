@@ -1,0 +1,53 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project</title>
+</head>
+<body id="body">
+    <script>
+        function  createGoldenRectangle( id, parentId, dimension){
+            var div = document.createElement("div");
+            div.id=id;
+            var element = document.getElementById(parentId);
+            var width = 0;
+            var height = 0;
+            if(!element.style.width ||  !element.style.height){
+                height = dimension/1.62;
+                width = dimension;
+            }else{
+                if((parseInt(element.style.width) > parseInt(element.style.height))){
+                    height = dimension;
+                    width = dimension/1.62;
+                }else{
+                    height = dimension/1.62;
+                    width = dimension;
+                }
+            }
+            element.appendChild(div);
+            document.getElementById(id).style.width = width;
+            document.getElementById(id).style.height = height;
+            document.getElementById(id).style.backgroundColor = getRandomColor();
+
+            if(width>10){
+                if(width>height){
+                    createGoldenRectangle("head"+ Math.random(),id,height);
+                }else{
+                    createGoldenRectangle("head"+ Math.random(),id,width);
+                }
+            }
+        }
+
+        createGoldenRectangle("head", "body", 9000);
+
+        function getRandomColor() {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+    </script>
+</body>
+</html>
