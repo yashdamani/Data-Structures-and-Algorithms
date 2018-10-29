@@ -1,0 +1,556 @@
+<!-- <html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var reg = /car/gm;
+			var testString = "This is my car. Cars are for transportation.";
+
+			console.log(reg.test(testString));
+		</script>
+	</body>
+</html>
+
+ -->
+
+
+
+<!--  <html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var reg = /\d/gm;
+			var testString = "I visited Australia in 2011.";
+
+			console.log(reg.test(testString));
+		</script>
+	</body>
+</html>
+
+ -->
+
+
+ <!-- <html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var reg = /tree/gmi;
+			var testString = "Tree provides us oxygen. I have a tree in my garden.";
+
+			console.log(reg.test(testString));
+		</script>
+	</body>
+</html>
+
+ -->
+
+
+<!-- <html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			// 1) : The preceding token is not quantifiable
+			// 2):
+			var reg = /[?]/gm;
+			var testString = "I have a pen. This pen is very good. Do you have a pen?";
+
+			console.log(reg.test(testString));
+		</script>
+	</body>
+</html> -->
+
+
+<!-- <html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			
+			// 1):
+			var reg = /[?]/gm;
+			var testString = "I have a pen. This pen is very good. Do you have a pen?";
+
+			//2:
+			var reg2 = /pen/;
+
+			console.log(reg.test(testString) + "\n" + reg2.test(testString));
+		</script>
+	</body>
+</html>
+ -->
+
+
+ <!-- <html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			
+			// 1) . matches any character (except for line terminators)
+			//2) :
+			var reg = /[.]/g;
+			var testString = "I have a pen. This pen is very good. Do you have a pen?";
+
+			console.log(reg.test(testString));
+
+			
+		</script>
+	</body>
+</html> -->
+
+
+<!-- <html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			
+			var reg = /\bcar\b/g;
+			var testString = "I have a car. It is a beautiful car. He is watching cartoon.";
+
+			console.log(reg.test(testString));
+
+			
+		</script>
+	</body>
+</html>
+ -->
+
+<!-- <html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			//1)
+			var reg = /\s/g; 
+			var testString = "This is a test string	with	tabs and spaces.";
+
+			console.log(reg.test(testString));
+
+			//2)
+
+			var reg2 = /\S/g;
+			var testString = "This is a test string	with	tabs and spaces.";
+
+			console.log(reg2.test(testString));
+
+
+			
+		</script>
+	</body>
+</html> -->
+
+<!-- <html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			
+			var reg = /\d/g;
+			var testString = "This year is 2018. Last year was 2017.";
+
+			console.log(reg.test(testString));
+
+			
+		</script>
+	</body>
+</html> -->
+
+<!-- <html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			//1)
+			var reg = /\d/g;
+			var testString = "This year is 2018. Last year was 2017.";
+
+			console.log(reg.test(testString));
+
+			//2)
+			var reg2 = /\D/g;
+			var testString = "This year is 2018. Last year was 2017.";
+
+			console.log(reg2.test(testString));
+
+		</script>
+	</body>
+</html> -->
+
+<!------------------------------------------------------------------------------------------------------>
+
+<!-- <html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			
+			var reg = /w/g;
+			var testString = "file11_123	file11_124";
+
+			console.log(reg.test(testString));
+
+			
+		</script>
+	</body>
+</html> -->
+
+<!------------------------------------------------------------------------------------------------------>
+
+
+
+<!-- <html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			
+			var reg = /.ear/g;
+			var testString = "par	zar	near	pear	deer	dear	clear	car	war	";
+			//near, pear, dear, lear
+			console.log(reg.test(testString));
+
+			
+		</script>
+	</body>
+</html> -->
+
+<!-- <html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			
+			var reg = /45.67/g;
+			var testString = "4567	45.67	45*67	45+67	45-67	45$67	";
+			//everything except the first one
+			console.log(reg.test(testString));
+
+			
+		</script>
+	</body>
+</html>
+ -->
+
+ <!-- <html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			//1)
+			var reg = /45.67/g;
+			var testString = "4567	45.67	45*67	45+67	45-67	45$67	";
+			//everything except the first one
+			console.log(reg.test(testString));
+
+			//2) by using \n
+
+		</script>
+	</body>
+</html> -->
+
+
+<!-- <html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			//1)
+			var reg = /[ne]t/g;
+			var testString = "neg net nt	et	pet zet";
+			//et, nt, et, et, et
+			console.log(reg.test(testString));
+
+		</script>
+	</body>
+</html>
+ -->
+
+ <!-- <html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var reg = /[ae]ffect/g;
+			var testString = "hl;dsfh affect nfdskjlnskdfl effect";
+			console.log(reg.test(testString));
+
+		</script>
+	</body>
+</html>
+ -->
+
+ <!-- <html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var reg = /pe[td]al/g;
+			var testString = "bkdjsbfs petal mndkjnf lnf pedal";
+			console.log(reg.test(testString));
+
+		</script>
+	</body>
+</html> -->
+
+
+<!--------------------------------------------------------------------------------------------------------->
+<!-- <html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var reg = /\b12\d{1}\b/g;
+			var testString = "7894 121 29892 122 29282 123 898292 124 29892 122223455 97494 125 4984";
+			console.log(reg.test(testString));
+
+		</script>
+	</body>
+</html>
+ -->
+
+ <!--------------------------------------------------------------------------------------------------------->
+
+
+ <!-- <html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var reg = /[jl]e[ea]p/g;
+			var testString = "jeep	leap";
+			console.log(reg.test(testString));
+
+		</script>
+	</body>
+</html> -->
+
+
+<!-- <html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			//1)
+			var reg = /[ch]atch/g;
+			var testString = "catch hatch";
+			console.log(reg.test(testString));
+
+			//2)
+			var reg2 = /[hm]ouse/g;
+			var testString2 = "house mouse";
+			console.log(reg2.test(testString2));
+
+			//3)
+			var reg3 = /[bp]ana[nm]a/g;
+			var testString3 = "banana panama";
+			console.log(reg3.test(testString3));
+
+		</script>
+	</body>
+</html> -->
+
+<!-- <html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var reg = /[jl]e[ea]p/g;
+			var testString = "jeep	leap";
+			console.log(reg.test(testString));
+
+		</script>
+	</body>
+</html>
+ -->
+
+
+<!-- <html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var reg = /flav[o]?[u]?r/g;
+			var testString = "flavour flavor";
+			console.log(reg.test(testString));
+
+		</script>
+	</body>
+</html>
+ -->
+
+ <!-- <html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var reg = /col[o]?[u]?r/g;
+			var testString = "color colour";
+			console.log(reg.test(testString));
+
+		</script>
+	</body>
+</html>
+ -->
+
+ <!-- <html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var reg = /book[s]?/g;
+			var testString = "book books";
+			console.log(reg.test(testString));
+
+		</script>
+	</body>
+</html>
+ -->
+
+ <!-- <html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var reg = /d{3}/g;
+			var testString = "123 345 567";
+			console.log(reg.test(testString));
+
+		</script>
+	</body>
+</html>
+ -->
+
+ <!-- <html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var reg = /d{6}/g;
+			var testString = "123 345 567";
+			console.log(reg.test(testString));
+
+		</script>
+	</body>
+</html>
+ -->
+
+ <!-- <html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var reg = /d{3,4}/g;
+			var testString = "123 456 2345 5677 23 45677 456675 6778888";
+			console.log(reg.test(testString));
+
+		</script>
+	</body>
+</html>
+ -->
+
+ <!-- <html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var reg = /truck[d{1}]?.html/g;
+			var testString = "truck.html truck1.html truck2.html";
+			console.log(reg.test(testString));
+
+		</script>
+	</body>
+</html>
+ -->
+
+
+ <!-- <html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var reg = /d{1,2}?flower/g;
+			var testString = "123 456 2345 5677 23 45677 456675 6778888";
+			console.log(reg.test(testString));
+
+		</script>
+	</body>
+</html>
+ -->
+
+
+<!-- <html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var reg = /[cp]?atch[es]?/g;
+			var testString = "catch catches patches";
+			console.log(reg.test(testString));
+
+		</script>
+	</body>
+</html>
+ -->
+
+ <!-- <html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var reg = /b[e.]/g;
+			var testString = "be bee beee";
+			console.log(reg.test(testString));
+
+		</script>
+	</body>
+</html>
+ -->
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
